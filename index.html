@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OptiGov</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#description">Project Description</a></li>
+        <li><a href="#methodology">Methodology</a></li>
+        <li><a href="#people">People</a></li>
+        <li><a href="#partners">Supporting PAs</a></li>
+        <li><a href="#publications">Publications</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- ADD THIS RIGHT-ALIGNED LIST -->
+  <ul class="nav navbar-nav navbar-right" style="margin-right:10px;">
+  <li>
+    <a href="https://tecnico.ulisboa.pt/en/" target="_blank" title="Partner 1" style="padding:8px 5px;">
+      <img src="./ist.jpg" alt="Partner 1" style="height:100px; width:auto; vertical-align:middle;">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.inesc-id.pt/" target="_blank" title="Partner 2" style="padding:8px 5px;">
+      <img src="./inesc-id.jpg" alt="Partner 2" style="height:100px; width:auto; vertical-align:middle;">
+    </a>
+  </li>
+</ul>
+
+
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+    <!-- Main Content Column -->
+    <div class="col-md-12">
+
+      <!-- Main Image -->
+      <center>
+        <img class="img-responsive" src="optigov-logo-new.jpg" alt="OptiGov" width="500" height="500" style="vertical-align:middle">
+      </center>
+
+      <div style="margin-top:3%; text-align:justify;">
+        <h1> OptiGov Project</h1>
+
+        <div style="margin-top:15px;"></div>
+
+        <p style="font-size:23px;"> Public administrations operate within intricate and evolving regulatory ecosystems, making it difficult to ensure that their process executions and documents fully meet all the legal requirements. The <b>OptiGov Project</b> harnesses AI — through Process Mining and Large Language Models — to automatically check and align these processes with their corresponding legal rules, ensuring  compliance and transparency.  </p>
+
+
+        <h2>Topics of the project</h2>
+        <p style="font-size:18px;">AI, Process Mining, PM, Automated Reasoning, Compliance Checking, Formal Methods</p>
+
+       
+        
+      </div>
+
+
+      <div style="margin-top:60px;"></div>
+
+
+      <!-- News Section -->
+      <h1 id="news">News</h1>
+
+      <div style="margin-top:15px;"></div>
+
+      <p>Currently, there are no news</p>
+
+      
+       <div style="margin-top:60px;"></div>
+
+
+           <!-- Description Section -->
+      <h1 id="description">Project Description</h1>
+
+      <div style="margin-top:15px;"></div>
+
+     <p>  Public administration processes are highly complex due to multiple constraints, frequent deviations from legislators’ “happy paths,” and extensive compliance requirements. This project leverages Data Science and Artificial Intelligence (AI) — notably Process Mining (PM) and Large Language Models (LLMs) — to manage and optimize such complexity. Process Mining integrates business process management and data science, using event logs to analyze performance and detect bottlenecks. LLMs, trained on vast text corpora, can interpret and structure unstructured documents, making them ideal for extracting knowledge from legal and technical texts. </p>
+
+<p> Public administration faces major compliance challenges when aligning process specification documents (e.g., enterprise architecture files) with legal guidelines often written in natural language. Traditional PM focuses mainly on process activities, neglecting data interactions. Recent multi-perspective PM research captures these aspects but still struggles with unstructured data. </p>
+
+<p> This project proposes a general-purpose, log-based compliance method, which consists of aligning enriched specification documents with normative guidelines, inspired by symbolic techniques in data-aware declarative PM. LLMs are used to preprocess textual documents, converting them into structured symbolic representations, in order to enable symbolic alignment. The approach involves (i) defining a symbolic formalism for expressing process constraints, (ii) extracting and structuring legal and specification data using LLMs, and (iii) computing alignment scores that quantify compliance. </p>
+
+<p>  A pilot on ICT governance in Portuguese public entities will assess the alignment between enterprise architecture specifications and national ICT guidelines (Decree-Law 107/2012). In collaboration with ARTE and IGFEJ public administrations, this initiative aims to enhance compliance, improve efficiency, and support better public service delivery. </p>
+
+<div style="margin-top:15px;"></div>
+
+       <p style="font-size:20px;" class="text-center"> <b>General Goal:</b> To <b><span style="color:red;">align</span> contractual specification documents</b>  of PA processes (e.g., document defining technological requirements) 
+with <b>legal guidelines</b> </p>
+
+
+ <div style="margin-top:60px;"></div>
+
+
+        <!-- Methodology Section -->
+      <h1 id="methodology">Methodology</h1>
+
+
+<div style="margin-top:15px;"></div>
+
+       <p>The project is structured in <b>4 phases</b>:
+
+<ol>
+<li> <b>Symbolic Formalization of Guidelines and Specifications. </b>
+  <ul>
+<li>design a symbolic schema for both contractual specification documents and guidelines. </li>
+<li> identify logical formalisms (temporal reasoning + conditions over data): fragments of First-Order Linear Temporal Logic (FO-LTL). </li></ul></li>
+
+<li> <b>Information Extraction via LLMs and RAG. </b> <ul>
+<li>develop a knowledge extraction pipeline based on LLMs, based on RAG and CoT. </li>
+<li>transform diverse textual inputs into the structured symbolic schema. </li>
+<li>RAG to dynamically access relevant context at inference time. </li>
+<li>CoT (with uncertainty and factuality-checking techniques) to address semantic fidelity
+integrate extracted information from event logs </li></ul></li>
+
+<li> <b> Symbolic Alignment via Formal Methods. </b> <ul>
+<li>develop an alignment algorithm for: structured documents against regulatory schemas. </li>
+<li>symbolic reasoning to compute a compliance score quantifying the degree of alignment </li>
+<li>identify specific discrepancies and their types.</li></ul></li>
+
+<li> <b>Validation and Evaluation. </b> <ul>
+<li>testing and validating the methodology using real data from partner PA entities (AMA and IGFEJ). </li>
+<li>Goal: (i) measure the precision and recall of LLM-based extraction methods; 
+(ii) evaluate the interpretability and reliability of the alignment scores
+(iii) test the system’s ability to handle complex, heterogeneous document types.</li></ul></li>
+</ol>
+</p>
+
+
+      <div style="margin-top:20px; margin-bottom:40px;">
+  <img
+    src="./pipeline.jpg"  
+    alt="Project Pipeline"
+    class="img-responsive center-block"
+    style="width:100%; height:auto; border:1px solid #ddd;"
+  >
+</div>
+
+
+ <div style="margin-top:60px;"></div>
+
+
+
+ 
+      <!-- People Section -->
+      <h1 id="people">People</h1>
+
+
+      <!-- Person 1 -->
+      <div class="media" style="margin-bottom:20px;">
+       <div class="media-left" style="min-width:90px;">
+        <img
+         src="./AlessandroGianola.jpg"
+         alt="Picture Alessandro Gianola"
+         class="media-object img-circle"
+         width="90" height="90"
+         style="object-fit:cover; display:block;"
+         onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+         >
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading" style="margin-top:10px;">Alessandro Gianola</h4>
+          <p><b>Principal Investigator</b> - <b>Local Coordinator</b> at INESC-ID. Professor Auxiliar, INESC-ID/Instituto Superior Técnico, Universidade de Lisboa</p>
+          <p style="margin-bottom:0;">
+           <a href="mailto:alessandro.gianola@tecnico.ulisboa.pt">email</a> · 
+            <a href="https://scholar.google.it/citations?user=7D8gWSUAAAAJ/">Google Scholar</a> · 
+            <a href="https://arsr.inesc-id.pt/~agianola/">Website</a>
+          </p>
+        </div>
+      </div>
+
+
+      <!-- Person 2 -->
+      <div class="media" style="margin-bottom:20px;">
+        <div class="media-left" style="min-width:90px;">
+         <img
+            src="./ChrysoulaZerva.jpg"
+            alt="Picture Chrysoula Zerva"
+            class="media-object img-circle"
+            width="90" height="90"
+           style="object-fit:cover; display:block;"
+           onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+          >
+        </div>
+        <div class="media-body">
+         <h4 class="media-heading" style="margin-top:10px;">Chrysoula Zerva</h4>
+         <p><b>Local Coordinator</b> at Instituto de Telecomunicações. Professor Auxiliar, Instituto de Telecomunicaçœes/Instituto Superior Técnico, Universidade de Lisboa</p>
+         <p style="margin-bottom:0;">
+            <a href="mailto:chrysoula.zerva@tecnico.ulisboa.pt">email</a> · 
+             <a href="https://scholar.google.com/citations?user=S5NGkFsAAAAJ">Google Scholar</a> · 
+             <a href="">Website</a>
+         </p>
+        </div>
+      </div>
+
+
+  
+  
+      <h3>INESC-ID</h3>
+
+        <h4> Faculty members </h4>
+        <!-- Persona 3 -->  
+      <div class="media" style="margin-bottom:20px;">
+        <div class="media-left" style="min-width:90px;">
+         <img
+            src="./andre.jpg"
+            alt="Picture André Vasconcelos"
+            class="media-object img-circle"
+            width="90" height="90"
+           style="object-fit:cover; display:block;"
+           onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+          >
+        </div>
+        <div class="media-body">
+         <h4 class="media-heading" style="margin-top:10px;">André Vasconcelos</h4>
+         <p>Professor Auxiliar, INESC-ID/Instituto Superior Técnico, Universidade de Lisboa</p>
+         <p style="margin-bottom:0;">
+            <a href="mailto:andre.vasconcelos@tecnico.ulisboa.pt">email</a> · 
+             <a href="">Google Scholar</a> · 
+             <a href="">Website</a>
+         </p>
+        </div>
+      </div>
+
+       <!-- Persona 4 -->  
+      <div class="media" style="margin-bottom:20px;">
+        <div class="media-left" style="min-width:90px;">
+         <img
+            src="./jose.jpg"
+            alt="Picture José Fragoso Santos"
+            class="media-object img-circle"
+            width="90" height="90"
+           style="object-fit:cover; display:block;"
+           onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+          >
+        </div>
+        <div class="media-body">
+         <h4 class="media-heading" style="margin-top:10px;">José Fragoso Santos</h4>
+         <p>Professor Auxiliar, INESC-ID/Instituto Superior Técnico, Universidade de Lisboa</p>
+         <p style="margin-bottom:0;">
+            <a href="mailto:jose.fragoso@tecnico.ulisboa.pt">email</a> · 
+             <a href="">Google Scholar</a> · 
+             <a href="">Website</a>
+         </p>
+        </div>
+      </div>
+
+        <!-- Persona 5 -->  
+      <div class="media" style="margin-bottom:20px;">
+        <div class="media-left" style="min-width:90px;">
+         <img
+            src="./joao.jpg"
+            alt="Picture João Ferreira"
+            class="media-object img-circle"
+            width="90" height="90"
+           style="object-fit:cover; display:block;"
+           onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+          >
+        </div>
+        <div class="media-body">
+         <h4 class="media-heading" style="margin-top:10px;">João F. Ferreira</h4>
+         <p>Professor Associado, INESC-ID/FEUP, Universidade do Porto</p>
+         <p style="margin-bottom:0;">
+            <a href="mailto:jff@inesc-id.pt">email</a> · 
+             <a href="">Google Scholar</a> · 
+             <a href="">Website</a>
+         </p>
+        </div>
+      </div>
+
+        <!-- Persona 5 -->  
+      <div class="media" style="margin-bottom:20px;">
+        <div class="media-left" style="min-width:90px;">
+         <img
+            src="./borbinha.jpg"
+            alt="Picture José Borbinha"
+            class="media-object img-circle"
+            width="90" height="90"
+           style="object-fit:cover; display:block;"
+           onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+          >
+        </div>
+        <div class="media-body">
+         <h4 class="media-heading" style="margin-top:10px;">José Borbinha</h4>
+         <p>Professor Catedrático, INESC-ID/Instituto Superior Técnico, Universidade de Lisboa</p>
+         <p style="margin-bottom:0;">
+            <a href="mailto:jlb@tecnico.ulisboa.pt">email</a> · 
+             <a href="">Google Scholar</a> · 
+             <a href="">Website</a>
+         </p>
+        </div>
+      </div>
+  
+      <h4> Research Assistants </h4>
+
+      <!-- Persona 6 -->  
+      <div class="media" style="margin-bottom:20px;">
+        <div class="media-left" style="min-width:90px;">
+         <img
+            src="./jose-ferreira.jpg"
+            alt="Picture José João Ferreira"
+            class="media-object img-circle"
+            width="90" height="90"
+           style="object-fit:cover; display:block;"
+           onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+          >
+        </div>
+        <div class="media-body">
+         <h4 class="media-heading" style="margin-top:10px;">José João Ferreira</h4>
+         <p>Master's student, INESC-ID/Instituto Superior Técnico, Universidade de Lisboa</p>
+         <p style="margin-bottom:0;">
+            <a href="mailto:josejoaoferreira@tecnico.ulisboa.pt">email</a> · 
+             <a href="">Google Scholar</a> · 
+             <a href="">Website</a>
+         </p>
+        </div>
+      </div>
+
+      <!-- Persona 7 -->  
+      <div class="media" style="margin-bottom:20px;">
+        <div class="media-left" style="min-width:90px;">
+         <img
+            src="./lucas.jpg"
+            alt="Picture Lucas Fortunato das Neves"
+            class="media-object img-circle"
+            width="90" height="90"
+           style="object-fit:cover; display:block;"
+           onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+          >
+        </div>
+        <div class="media-body">
+         <h4 class="media-heading" style="margin-top:10px;">Lucas Fortunato das Neves</h4>
+         <p>Master's student, INESC-ID/Instituto Superior Técnico, Universidade de Lisboa</p>
+         <p style="margin-bottom:0;">
+            <a href="mailto:lucas.neves@tecnico.ulisboa.pt">email</a> · 
+             <a href="">Google Scholar</a> · 
+             <a href="">Website</a>
+         </p>
+        </div>
+      </div>
+
+      <!-- Persona 8 -->  
+      <div class="media" style="margin-bottom:20px;">
+        <div class="media-left" style="min-width:90px;">
+         <img
+            src="./david.jpg"
+            alt="Picture Davide Valente"
+            class="media-object img-circle"
+            width="90" height="90"
+           style="object-fit:cover; display:block;"
+           onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+          >
+        </div>
+        <div class="media-body">
+         <h4 class="media-heading" style="margin-top:10px;">David Valente</h4>
+         <p>Master's student, INESC-ID/Instituto Superior Técnico, Universidade de Lisboa</p>
+         <p style="margin-bottom:0;">
+            <a href="mailto:david.valente@tecnico.ulisboa.pt">email</a> · 
+             <a href="">Google Scholar</a> · 
+             <a href="">Website</a>
+         </p>
+        </div>
+      </div>
+
+      <!-- Persona 9 -->  
+      <div class="media" style="margin-bottom:20px;">
+        <div class="media-left" style="min-width:90px;">
+         <img
+            src="./-.jpg"
+            alt="Picture André Alves"
+            class="media-object img-circle"
+            width="90" height="90"
+           style="object-fit:cover; display:block;"
+           onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+          >
+        </div>
+        <div class="media-body">
+         <h4 class="media-heading" style="margin-top:10px;">André Alves</h4>
+         <p>Master's student, INESC-ID/Instituto Superior Técnico, Universidade de Lisboa</p>
+         <p style="margin-bottom:0;">
+            <a href="">email</a> · 
+             <a href="">Google Scholar</a> · 
+             <a href="">Website</a>
+         </p>
+        </div>
+      </div>
+
+      <h3>Instituto de Telecomunicações </h3>
+
+      <h4> Research Assistants </h4>
+
+      <!-- Persona  10 -->  
+      <div class="media" style="margin-bottom:20px;">
+        <div class="media-left" style="min-width:90px;">
+         <img
+            src="./giorgos.jpg"
+            alt="Picture Giorgos"
+            class="media-object img-circle"
+            width="90" height="90"
+           style="object-fit:cover; display:block;"
+           onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+          >
+        </div>
+        <div class="media-body">
+         <h4 class="media-heading" style="margin-top:10px;">Giorgos Filandrianos</h4>
+         <p>Postdoctoral Researcher. Instituto de Telecomunicações</p>
+         <p style="margin-bottom:0;">
+            <a href="">email</a> · 
+             <a href="">Google Scholar</a> · 
+             <a href="">Website</a>
+         </p>
+        </div>
+      </div>
+
+       <!-- Persona  11 -->  
+      <div class="media" style="margin-bottom:20px;">
+        <div class="media-left" style="min-width:90px;">
+         <img
+            src="./-.jpg"
+            alt="Picture Rodrigo"
+            class="media-object img-circle"
+            width="90" height="90"
+           style="object-fit:cover; display:block;"
+           onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+          >
+        </div>
+        <div class="media-body">
+         <h4 class="media-heading" style="margin-top:10px;">Rodrigo Lopes</h4>
+         <p>Master's students. Instituto de Telecomunicações/Instituto Superior Técnico, Universidade de Lisboa</p>
+         <p style="margin-bottom:0;">
+            <a href="">email</a> · 
+             <a href="">Google Scholar</a> · 
+             <a href="">Website</a>
+         </p>
+        </div>
+      </div>
+
+      <!-- Persona  12 -->  
+      <div class="media" style="margin-bottom:20px;">
+        <div class="media-left" style="min-width:90px;">
+         <img
+            src="./-.jpg"
+            alt="Picture Rodolfo"
+            class="media-object img-circle"
+            width="90" height="90"
+           style="object-fit:cover; display:block;"
+           onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+          >
+        </div>
+        <div class="media-body">
+         <h4 class="media-heading" style="margin-top:10px;">Rodolfo Amorim</h4>
+         <p>Master's students. Instituto de Telecomunicações/Instituto Superior Técnico, Universidade de Lisboa</p>
+         <p style="margin-bottom:0;">
+            <a href="">email</a> · 
+             <a href="">Google Scholar</a> · 
+             <a href="">Website</a>
+         </p>
+        </div>
+      </div>
+
+
+        <!-- Persona  12 -->  
+      <div class="media" style="margin-bottom:20px;">
+        <div class="media-left" style="min-width:90px;">
+         <img
+            src="./-.jpg"
+            alt="Picture José Menezes"
+            class="media-object img-circle"
+            width="90" height="90"
+           style="object-fit:cover; display:block;"
+           onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+          >
+        </div>
+        <div class="media-body">
+         <h4 class="media-heading" style="margin-top:10px;">José Menezes</h4>
+         <p>Master's students. Instituto de Telecomunicações/Instituto Superior Técnico, Universidade de Lisboa</p>
+         <p style="margin-bottom:0;">
+            <a href="">email</a> · 
+             <a href="">Google Scholar</a> · 
+             <a href="">Website</a>
+         </p>
+        </div>
+      </div>
+
+
+
+ <div style="margin-top:60px;"></div>
+
+
+
+
+
+<!-- Partners Section -->
+      <h1 id="partners">Supporting Public Administrations</h1>
+
+<style>
+  .partner-logo {
+    width: 100px;
+    height: auto;
+    display: block;
+    border: 1px solid #ddd;
+    padding: 4px;
+    background: #fff;
+  }
+  @media (max-width: 480px) {
+    .media .media-left { padding-right: 12px; }
+  }
+</style>
+
+<!-- PA 1 -->
+<div class="media" style="margin-bottom:25px;">
+  <div class="media-left" style="min-width:100px;">
+    <img
+      src="./arte.jpg"
+      alt="Logo – ARTE, Portugal"
+      class="media-object partner-logo"
+      onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+    >
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading" style="margin-top:10px;">Agência para a Reforma Tecnológica do Estado (ARTE), Portugal</h4>
+    <p>
+      Agência para a Reforma Tecnológica do Estado, I.P. (Agency for Technological Reform of the State, - ARTE) is the public institute responsible for directing, coordinating, and implementing the technological transformation and digitalization of Public Administration in Portugal, operating under the supervision and authority of the Ministry of State Reform.</p>
+
+<p>ARTE was established in 2025 as part of the restructuring of the Agência para a Modernização Administrativa (Agency for Administrative Modernization - AMA), with the aim of promoting administrative modernization and simplification, ensuring system and data interoperability, implementing cybersecurity and data policies, integrating emerging technologies, coordinating the omnichannel and in-person service network, and strengthening the digital skills of Portuguese society, working in close cooperation with all entities of the Public Administration.
+    </p>
+  </div>
+</div>
+
+<!-- PA 2 -->
+<div class="media" style="margin-bottom:25px;">
+  <div class="media-left" style="min-width:100px;">
+    <img
+      src="./igfej.jpg"
+      alt="Logo – IGFEJ"
+      class="media-object partner-logo"
+      onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"
+    >
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading" style="margin-top:10px;">Instituto de Gestão Financeira e Equipamentos da Justiça (IGFEJ), Portugal</h4>
+    <p>
+      The Instituto de Gestão Financeira e Equipamentos da Justiça (Institute for Financial Management and Justice Equipment - IGFEJ) manages the financial, property, and technological resources of the Ministry of Justice in Portugal. It is a public institute, endowed with administrative and financial autonomy and its own assets, which carries out the responsibilities of the Ministry of Justice under its supervision and authority. </p>
+
+    <p>It was created in 2012, is part of the State’s indirect administration, and has jurisdiction over the entire national territory. It plays a central role within the Ministry of Justice, providing essential services for the proper functioning of the judicial system. The IGFEJ operates in several areas that cut across the Ministry of Justice, namely budgetary and financial management, assets and construction, technological infrastructure, and information systems.
+    </p>
+  </div>
+</div>
+      <!-- You can keep the rest of the sections (Awards, Teaching, Publications, etc.) as in your original HTML -->
+      <!-- They remain inside the same col-md-12 container -->
+
+    
+
+      <!-- Publications Section -->
+      <h1 id="publications">Publications</h1>
+
+      <div style="margin-top:15px;"></div>
+      <p>TBA</p>
+      <!-- You can keep the rest of the sections (Awards, Teaching, Publications, etc.) as in your original HTML -->
+      <!-- They remain inside the same col-md-12 container -->
+      
+    </div>
+  </div>
+</div>
+
+  <!-- Ack <div><br></div>
+<a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> -->
+
+<!-- Funding / Acknowledgments -->
+<footer class="container" id="funding" style="margin-top:50px; margin-bottom:30px; text-align:center;">
+  <hr>
+  <h3 style="margin-bottom:25px;">Funding and Acknowledgments</h3>
+
+  <!-- Logos -->
+  <div class="row" style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:40px;">
+
+    <!-- Logo 1 -->
+    <div>
+      <a href="https://www.fct.pt/" target="_blank">
+        <img src="fct.jpg" alt="undação para a Ciência e a Tecnologia" 
+             style="max-height:80px; width:auto;">
+      </a>
+    </div>
+
+    <!-- Logo 2 -->
+    <div>
+      <a href="https://recuperarportugal.gov.pt/" target="_blank">
+        <img src="prr.png" alt="Pano de Recupração e Resiliência" 
+             style="max-height:80px; width:auto;">
+      </a>
+    </div>
+
+    <!-- Logo 3 -->
+    <div>
+      <a href="" target="_blank">
+        <img src="eu.png" alt="European Union" 
+             style="max-height:80px; width:auto;">
+      </a>
+    </div>
+
+  </div>
+
+  <p style="margin-top:25px; color:#666; font-size:0.9em;">
+    This work was fully funded by the ‘Plano de Recuperação e Resiliência’ (PRR) under the investment ‘RE-C05-i08 - Ciência Mais Digital’ (measure ‘RE-C05-i08.m04’), framed within the financing agreement signed between the ‘Estrutura de Missão Recuperar Portugal’ (EMRP) and Fundação para a Ciência e a Tecnologia, I.P. (FCT) as an intermediary beneficiary.
+  </p>
+</footer>
+
+
+</body>
+</html>
